@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/gallery.css">
+    <link rel="stylesheet" href="./assets/css/documentary.css">
+    <link rel="stylesheet" href="./assets/css/artifact.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/artifact-respon.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Phim tài liệu</title>
+</head>
+<body>
+    <div class="header_time">
+        <h6>
+            <i class="fa-solid fa-clock-rotate-left"></i> GIỜ MỞ CỬA:
+            Tất cả các ngày trong tuần
+            (Kể cả ngày Lễ, Tết)
+            Từ 8h00 đến 17h00
+        </h6>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm...">
+            <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <img src="./assets/img/Flag_of_Vietnam.svg.webp" alt="">
+        </h6>
+    </div>
+    <header class="menu">
+        <div id="main" class="icon-menu">
+            <i onclick="openNav()" class="openbtn fa-solid fa-bars"></i>
+            <i onclick="closeNav()" class="closebtn fa-solid fa-xmark"></i>
+            </div>
+            
+    
+        <div class="menu-icon">
+            <img class="menu-icon-item" src="./assets/img/logo1.png" alt="">
+        </div>
+        <div id="mySidebar" class="menu-list-box">
+        <ul class="menu-list">
+            <li><a href="./index.html"><i class="fa-solid fa-house-chimney"></i>giới thiệu</a></li>
+            <li><a href="./post.html">tin tức-sự kiện</a></li>
+            <li><a href="./artifact.html">trưng bày</a></li>
+            <li><a href="./education.html">giáo dục truyền thông</a></li>
+            <li><a href="./artifact.html">sản phẩm đặc trưng</a></li>
+            <li><a href="javascript:void(0);" onclick="toggleDocumentMenu()">tài liệu<i class="fa-solid fa-chevron-down" style="margin-left: 4px;"></i></a>
+                <ul class="document_menu">
+                    <li><a href="./documentary.html">Phim tài liệu</a></li>
+                    <li><a href="./gallery.html">thư viện ảnh</a></li>
+                    <li><a href="./artifact.html">hiện vật</a></li>
+                </ul>
+            </li>
+            <li><a href="./register.html">dịch vụ</a></li>
+            <li><a href="./contact.html">liên hệ</a>
+        </ul>
+        </div>
+    </header>
+    <div class="breadcrumb "></div>
+
+    <div class="head-tagline">
+        <img src="./assets/img/Tag.png" alt="">
+    </div>
+
+    <!-- Modal for Image Zoom -->
+    <!-- <div id="myModal" class="modal">
+
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgZoom">
+            <div>
+                <p>
+                    Hiện vật Bát gốm sứ
+                </p>
+                <h6>Bộ sưu tập Hiện vật Gốm sứ</h6>
+            </div>
+            <div id="caption">
+                <p>
+                    Hiện vật Bát gốm sứ
+                </p>
+                <h6>Bộ sưu tập Hiện vật Gốm sứ</h6>
+        </div>
+    </div>    -->
+    <div id="myModal" class="modal">
+        <div class="modal_box justify-content-center align-content-center">
+            
+            <img class="modal-content" id="imgZoom">
+            <div class="title-img d-flex justify-content-between">
+                <div>
+                    <p>
+                        Hiện vật Bát gốm sứ
+                    </p>
+                    <h6>Bộ sưu tập Hiện vật Gốm sứ</h6></p> 
+                </div>
+                <button class="button-close">Đóng X</button>
+                <!-- <span ></span>  -->
+            </div>
+             
+        </div>
+    </div>
+
+    <div class="container artifact">
+        <div class="artifact_new">
+            <div class="artifact_new_img img_oj">
+                <img class="atf_new1" src="./assets/img/hienvat/pagehienvat/a1.png" alt="">
+                <img class="atf_new2" src="./assets/img/hienvat/pagehienvat/a2.png" alt="">
+                <img class="atf_new3" src="./assets/img/hienvat/pagehienvat/a3.png" alt="">
+            </div>
+            <h5 class="title">Bộ sưu tập mới</h5>
+        </div>
+
+        <div class="ceramics">
+            <h5 class="title">Bộ sưu hiện vật gốm sứ</h5>
+            <div class="box_img img_oj">
+                <img src="./assets/img/hienvat/pagehienvat/a4.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/a5.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/66.png" alt="">
+            </div>
+            <div class="pagination mt-2">
+                <a href="#" class="prev">&lt;</a>
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page">4</a>
+                <a href="#" class="next">&gt;</a>
+              </div>
+        </div>
+        <div class="construction">
+            <h5 class="title">Bộ sưu hiện vật xây dựng</h5>
+            <div class="box_img img_oj">
+                <img src="./assets/img/hienvat/pagehienvat/a7.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/a8.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/a9.png" alt="">
+
+            </div>
+            <div class="pagination mt-2">
+                <a href="#" class="prev">&lt;</a>
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page">4</a>
+                <a href="#" class="next">&gt;</a>
+              </div>
+        </div>
+        <div class="metal">
+            <h5 class="title">Bộ sưu hiện vật kim loại</h5>
+            <div class="box_img img_oj">
+                <img src="./assets/img/hienvat/pagehienvat/a10.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/a11.png" alt="">
+                <img src="./assets/img/hienvat/pagehienvat/a12.png" alt="">
+
+            </div>
+            <div class="pagination mt-2">
+                <a href="#" class="prev">&lt;</a>
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page">4</a>
+                <a href="#" class="next">&gt;</a>
+              </div>
+        </div>
+        <div class="content_right">
+            <div class="post-content-right d-block">
+                <h1>bộ sưu tập  HIỆN VẬT</h1>
+                <div class="topic topic_1">
+                    <h6>1. BỘ SƯ TẬP HIỆN VẬT GỐM SỨ</h6>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a1.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a2.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+                <div class="topic topic_2">
+                    <h6>2. BỘ SƯU TẬP HIỆN VẬT KIM LOẠI</h6>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a3.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a4.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a5.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/66.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a7.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+                
+                <div class="topic topic_3">
+                    <h6>3. BỘ SƯU TẬP HIỆN VẬT VẢI, ĐỆT</h6>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a8.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a9.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a10.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a11.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                    <div class="most-view-items d-flex">
+                                        <img src="./assets/img/hienvat/pagehienvat/a12.png" alt="">
+                        <p>Title Post Lorem Ipsum is simply dummy text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div id="footer">
+        <div class="infomation container">
+            <div class="infomation_item logo">
+                <img src="./assets/img/Frame.png" alt="">
+            </div>
+            <div class="infomation_item info">
+                <h1 class="footer_h1">thông tin liên hệ</h1>
+                <div>
+                    <p><i class="fa-solid fa-house-flag"></i>Số 1, phố Hỏa Lò, Hoàn Kiếm, Hà Nội</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>024.39342253</p>
+                    <p><i class="fa-solid fa-blender-phone"></i>024.39342317</p>
+                    <p><i class="fa-solid fa-envelope"></i>bqldtnthl_sovhtt@hanoi.gov.vn</p>
+                    
+                </div>
+            </div>
+            <div class="infomation_item link">
+                <h1 class="footer_h1">thông tin liên hệ</h1>
+                <div class="link_item">
+                    <div>
+                        <img src="./assets/img/footer/a1.png" alt="">
+                        <p>Hoàng thành 
+                            Thăng Long</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/footer/a2.png" alt="">
+                        <p>Bảo tàng
+                            Hồ Chí Minh</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/footer/a3.png" alt="">
+                        <p>Bảo tàng
+                            Phụ nữ Việt Nam</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/footer/a4.png" alt="">
+                        <p>Bảo tàng
+                            Công an nhân dân</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/footer/a5.png" alt="">
+                        <p>Bảo tàng
+                            Mỹ thuật Việt Nam</p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/footer/a6.png" alt="">
+                        <p>Bảo tàng
+                            Lịch sử Quốc gia</p>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="infomation_item facebook">
+                <h1 class="footer_h1">thông tin liên hệ</h1>
+                <div class="facebook_item">
+                    <div class="fb-page" data-href="https://www.facebook.com/pages/Khu-Di-T%C3%ADch-Nh%C3%A0-T%C3%B9-Ho%E1%BA%A3-L%C3%B2/290522211146747" data-tabs="timeline" data-width="" data-height="200px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                </div>
+            </div>
+
+            <div class="coppyright">
+                <span>Copyright © 2018 HoaLo. Rights reserved</span>
+
+              </div>
+            
+              <div class="coppyright">
+              </div>
+              <div class="coppyright">
+                </div>
+                <div class="coppyright">
+                    <span>Online: 9 Tổng truy cập: 514.346</span>
+                  </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgZoom");
+        var captionText = document.getElementById("caption");
+    
+        document.querySelectorAll('.img_oj img').forEach(function(image) {
+            image.onclick = function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            };
+        });
+    
+        var closeButton = document.getElementsByClassName("button-close")[0];
+    
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        };
+    
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+    <script src="./js/lightbox-plus-jquery.js"></script>
+
+    <script src="./assets/js/menurespon.js"></script>
+        
+</body>
+</html>
